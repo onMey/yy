@@ -25,7 +25,7 @@ def exp(u,servlet):
     random = Random()
     for i in range(5):
         flag += chars[random.randint(0, length)]
-    filename = 't00ls.jsp'
+    filename = '36src.jsp'
 
     #filename5位
     #code627位
